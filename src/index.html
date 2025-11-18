@@ -5,9 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="text-indigo-50">
+  <header id="header" class="bg-indigo-950">
+    <nav class="h-16 flex justify-between items-center shadow-sm sticky top-0 sm:px-24">
+        <button id="menu-button" class="absolute left-2 sm:hidden">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+        </button>
+        <h1 class="mx-auto bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent text-2xl font-black sm:mx-0">&lt Rodrigo Gutiérrez /&gt</h1>
+        <ul class="absolute top-0 hidden flex flex-col h-dvh w-dvw bg-indigo-950 justify-around text-center text-2xl font-bold sm: static sm:flex sm:h-auto sm:w-1/2 sm:flex-row sm: justify-between sm:bg-transparent sm:text-sm sm:text-left ">
+            <li>
+                <a href="#about-me">Sobre mí</a>
+            </li>
+            <li>
+                <a href="#projects">Proyectos</a>
+            </li>
+            <li>
+                <a href="#experience">Experiencia</a>
+            </li>
+            <li>
+                <button class="sm:hidden">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Close_Circle"> <path id="Vector" d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                </button>
+            </li>
+            
+        </ul>
+       
+    </nav>
+  </header>
 </body>
 </html>

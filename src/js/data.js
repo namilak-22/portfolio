@@ -20,5 +20,16 @@ export const projects=[
      tech:'HTML5,TAILWINDCSS,JAVASCRIPT',
      link:'https://github.com/namilak-22/portfolio'   
     
+    },
+    {title:'Administrador Inventarios',
+     img:{
+        src:'./img/admon-projects.png',
+        alt:'Portfolio Rodrigo'
+     },
+     description:'Administra inventarios, alta y baja de productos',
+     titleTech:'⚙️ Tecnologías:',
+     tech:'REACT, VITE, TYPESCRIPT, TAILWINDCSS,EXPRESS JS',
+     link:'https://github.com/namilak-22/rest_apis_typescript_frontend'   
+    
     }
 ]

@@ -14,15 +14,19 @@
     --color-stone-950: oklch(14.7% 0.004 49.25);
     --color-black: #000;
     --spacing: 0.25rem;
+    --breakpoint-sm: 40rem;
     --breakpoint-lg: 64rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-black: 900;
     --default-font-family: var(--font-sans);
@@ -207,6 +211,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -236,6 +243,12 @@
   }
   .max-w-screen-lg {
     max-width: var(--breakpoint-lg);
+  }
+  .max-w-screen-sm {
+    max-width: var(--breakpoint-sm);
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -270,6 +283,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-indigo-950 {
     background-color: var(--color-indigo-950);
   }
@@ -298,12 +315,19 @@
   .object-cover {
     object-fit: cover;
   }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
   .text-center {
     text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-6xl {
     font-size: var(--text-6xl);
@@ -321,15 +345,26 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
   .text-indigo-50 {
     color: var(--color-indigo-50);
   }
   .text-transparent {
     color: transparent;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .sm\:static {
     @media (width >= 40rem) {
@@ -361,9 +396,9 @@
       width: calc(1/2 * 100%);
     }
   }
-  .sm\:max-w-screen-lg {
+  .sm\:max-w-screen-sm {
     @media (width >= 40rem) {
-      max-width: var(--breakpoint-lg);
+      max-width: var(--breakpoint-sm);
     }
   }
   .sm\:flex-row {
@@ -381,24 +416,9 @@
       background-color: transparent;
     }
   }
-  .sm\:px-0 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 0);
-    }
-  }
-  .sm\:px-4 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 4);
-    }
-  }
   .sm\:px-8 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 8);
-    }
-  }
-  .sm\:px-24 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 24);
     }
   }
   .sm\:text-left {
@@ -410,6 +430,11 @@
     @media (width >= 40rem) {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .lg\:max-w-screen-lg {
+    @media (width >= 64rem) {
+      max-width: var(--breakpoint-lg);
     }
   }
 }
@@ -432,6 +457,11 @@
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -544,6 +574,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
@@ -568,6 +603,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -592,6 +628,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }

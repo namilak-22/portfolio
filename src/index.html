@@ -8,7 +8,7 @@
   <body class="bg-stone-950 text-indigo-50">
     <header id="header" class="bg-indigo-950">
       <nav
-        class="sticky top-0 flex h-16 items-center justify-between shadow-sm sm:px-8"
+        class="sticky top-0 mx-auto flex h-16 sm:max-w-screen-sm lg:max-w-screen-lg items-center justify-between shadow-sm sm:px-8"
       >
         <button id="menu-button" class="absolute left-2 sm:hidden">
           <svg
@@ -86,9 +86,10 @@
         </ul>
       </nav>
     </header>
+
     <section id="hero">
       <article
-        class="sm: flex max-w-72 max-w-screen-lg flex-wrap items-center justify-between"
+        class="mx-auto flex max-w-72 flex-wrap items-center justify-between py-16 sm:max-w-screen-sm lg:max-w-screen-lg"
       >
         <img
           class="mx-auto mt-4 max-w-72 rounded-full object-cover"
@@ -130,6 +131,16 @@
           </ul>
         </div>
       </article>
+    </section>
+
+    <section id="about-me" class="bg-indigo-950 py-16">
+        <article class="mx-auto max-w-72 flex flex-col gap-10 sm: max-w-screen-sm lg:max-screen-lg">
+            <h3 class="text-4xl font-semibold">Sobre Mí</h3>
+            <p><span class="font-bold">👷 Profesión: </span>Soy ingeniero en sistemas computacionales, egresado de la Universidad Autónoma de Campeche en 2007. Desde entonces he mantenido un enfoque constante en el desarrollo tecnológico y en la construcción de soluciones que aporten valor real a empresas y usuarios.</p>
+            <p><span>🧑‍💻 Motivación como Desarrollador: </span>Me apasiona el desarrollo de software y disfruto enfrentar retos técnicos que requieren análisis, diseño y creatividad. Para mí, programar es una manera de transformar ideas en herramientas funcionales que mejoran procesos y simplifican tareas.</p>
+            <p><span>🛠️ Habilidades: </span>Cuento con experiencia en diversas tecnologías, entre ellas React, PHP, HTML, CSS, Python y JavaScript. También trabajo con modelos y arquitecturas como MERN y PERN, lo que me permite desarrollar aplicaciones completas tanto del lado del cliente como del lado del servidor.</p>
+            <p><span>❤️ Tiempo Libre: </span>Fuera del ámbito profesional, valoro mucho el tiempo con mi familia. Ese equilibrio personal me ayuda a mantener una visión clara, motivación constante y enfoque en cada proyecto que emprendo.</p>
+        </article>
     </section>
   </body>
   <script src="./js/navigation.js"></script>

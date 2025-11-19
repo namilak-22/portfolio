@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="text-indigo-50 bg-stone-950">
+  <body class="bg-stone-950 text-indigo-50">
     <header id="header" class="bg-indigo-950">
       <nav
-        class="h-16 flex justify-between items-center shadow-sm sticky top-0 sm:px-8"
+        class="sticky top-0 flex h-16 items-center justify-between shadow-sm sm:px-8"
       >
         <button id="menu-button" class="absolute left-2 sm:hidden">
           <svg
@@ -36,13 +36,13 @@
           </svg>
         </button>
         <h1
-          class="mx-auto bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent text-2xl font-black sm:mx-0"
+          class="mx-auto bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-2xl font-black text-transparent sm:mx-0"
         >
           &lt Rodrigo Gutiérrez /&gt
         </h1>
         <ul
           id="nav-menu"
-          class="absolute top-0 hidden flex flex-col h-dvh w-dvw bg-indigo-950 justify-around text-center text-2xl font-bold sm:static sm:flex sm:h-auto sm:w-1/2 sm:flex-row sm:justify-between sm:bg-transparent sm:text-sm sm:text-left"
+          class="absolute top-0 flex hidden h-dvh w-dvw flex-col justify-around bg-indigo-950 text-center text-2xl font-bold sm:static sm:flex sm:h-auto sm:w-1/2 sm:flex-row sm:justify-between sm:bg-transparent sm:text-left sm:text-sm"
         >
           <li>
             <a href="#about-me">Sobre mí</a>
@@ -54,7 +54,7 @@
             <a href="#experience">Experiencia</a>
           </li>
           <li class="sm:hidden">
-            <button >
+            <button>
               <svg
                 width="50px"
                 height="50px"
@@ -87,15 +87,17 @@
       </nav>
     </header>
     <section id="hero">
-      <article class="max-w-72 flex flex-wrap items-center justify-between sm: max-w-screen-lg">
+      <article
+        class="sm: flex max-w-72 max-w-screen-lg flex-wrap items-center justify-between"
+      >
         <img
-          class="max-w-72 mx-auto mt-4 rounded-full object-cover"
+          class="mx-auto mt-4 max-w-72 rounded-full object-cover"
           src="./img/rodo.jpeg"
           alt="imagen perfil Rodrigo"
         />
         <div class="mx-auto my-4 flex flex-col gap-10">
           <h2
-            class="mx-auto bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent text-6xl font-black text-center sm:text-left"
+            class="mx-auto bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-center text-6xl font-black text-transparent sm:text-left"
           >
             ¡Hola!
           </h2>
@@ -110,7 +112,7 @@
                 target="_blank"
               >
                 <img
-                  class="w-10 h-10"
+                  class="h-10 w-10"
                   src="./img/linkedin-svgrepo-com.svg"
                   alt="Logo Linkedin"
                 />
@@ -119,7 +121,7 @@
             <li>
               <a href="https://github.com/namilak-22" target="_blank">
                 <img
-                  class="w-10 h-10"
+                  class="h-10 w-10"
                   src="./img/github-svgrepo-com.svg"
                   alt="Logo Github"
                 />

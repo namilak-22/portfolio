@@ -168,29 +168,30 @@
       </article>
     </section>
 
-    <section class="py-16" id="projects">
-      <div class="mx-auto max-w-72">
+    <section class="py-16" >
+      <div class="mx-auto max-w-72 sm:max-w-screen-sm lg:max-w-screen-lg">
         <h3 class="text-4xl font-semibold">Proyectos</h3>
-        <ul class="text-indigo-950 py-10 flex flex-wrap justify-between gap-20">
-          <li class="h-96 w-72 overflow-hidden rounded-md bg-indigo-50">
+        <ul id="projects" class="text-indigo-950 py-10 flex flex-wrap justify-between gap-20">
+          <template data-template="project-card">
+
+            <li class="h-96 w-72 overflow-hidden rounded-md bg-indigo-50">
             <img
               class="h-1/3 w-full object-cover"
-              src="./img/unini.png"
-              alt="Proyecto Unini"
+              src=""
+              alt=""
             />
             <div class=" flex h:2/3  flex-col justify-between p-2">
               <h4 class="text-center text-lg font-bold">
-                Formulario de Pago OpenPay Unini
+                
               </h4>
               <p>
-                Un carrusel de pago con protocolo de openpay bbva, con 3d secure
-                para corroborar tarjetas de crédito o débito legítimas.
+                
               </p>
               <p>
-                ⚙️ Tecnologías:
-                <span class="font-bold">PHP, HTML, CSS, JAVASCRIPT</span>
+                
+                <span class="font-bold"></span>
               </p>
-              <a href="https://github.com/namilak-22/uniniPagoOpenpay/tree/master" target="_blank"><!-- poner el repositorio de github -->
+              <a href="" target="_blank"><!-- poner el repositorio de github -->
               <button
                 class="flex w-32 justify-center gap-4 rounded-md border-1 border-pink-500 bg-pink-500 py-2 text-indigo-50 transition-colors duration-300 hover:bg-indigo-50 hover:text-pink-500 cursor-pointer m-0"
               >
@@ -225,9 +226,11 @@
               </a>
             </div>
           </li>
+           </template>
         </ul>
       </div>
     </section>
   </body>
   <script src="./js/navigation.js"></script>
+  <script type="module" src="./js/templates.js"></script>
 </html>

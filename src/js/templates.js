@@ -7,8 +7,7 @@ projects.forEach(project=>{
    const image=card.querySelector('img');
    const title=card.querySelector('h4');
    const description=card.querySelectorAll('p')[0];
-   const titleTech=card.querySelectorAll('p')[1];
-   const tech=card.querySelectorAll('span')[0]
+   const tech=card.querySelectorAll('p')[1];
    const link=card.querySelector('a');
 
    image.src=project.img.src;
@@ -18,11 +17,11 @@ projects.forEach(project=>{
 
    description.textContent=project.description;
 
-   titleTech.textContent=project.titleTech;
 
-   tech.textContent=project.tech;
+   tech.insertAdjacentHTML('beforeend',project.tech)
 
    link.href=project.link;
+   console.log(tech)
 
         projectsUl.appendChild(card)
    });

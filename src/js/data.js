@@ -40,4 +40,5 @@ export const projects=[
      link:'https://github.com/namilak-22/controlGastos/tree/main'   
     
     }
+    
 ]
